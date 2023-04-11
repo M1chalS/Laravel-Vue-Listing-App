@@ -6,8 +6,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
+      MYSQL_TCP_PORT: 3307
     ports:
-      - 3306:3306
+      - 3307:3307
   adminer:
     image: adminer
     restart: always

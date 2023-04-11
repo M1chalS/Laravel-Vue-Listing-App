@@ -5,7 +5,8 @@
                 <div class="flex items-center gap-1">
                     <Price :price="listing.price" class="text-2xl font-bold"/>
                     <div class="text-xs text-gray-500">
-                        <Price :price="monthlyPayment" /> pm
+                        <Price :price="monthlyPayment"/>
+                        pm
                     </div>
                 </div>
                 <ListingSpace :listing="listing" class="text-lg"/>
@@ -16,7 +17,7 @@
             <Link :href="route('listing.edit', listing.id)">edit</Link>
         </div>
         <div>
-            <Link :href="route('listing.destroy', listing.id)" method="DELETE">delete</Link>
+            <Link :href="route('listing.destroy', listing.id)" method="DELETE" as="embed">delete</Link>
         </div>
     </Box>
 </template>
