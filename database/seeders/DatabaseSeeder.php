@@ -21,7 +21,18 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test2@example.com',
+            'is_admin' => true,
+        ]);
 
-        Listing::factory(20)->create();
+        Listing::factory(10)->create([
+            'user_id' => 1,
+        ]);
+
+        Listing::factory(10)->create([
+            'user_id' => 2,
+        ]);
     }
 }

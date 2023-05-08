@@ -16,7 +16,7 @@
                     <Link :href="route('listing.create')"
                           class="btn-primary">+ New Listing
                     </Link>
-                    <Link :href="route('logout')" method="DELETE" as="embed" class="cursor-pointer">Logout</Link>
+                    <Link :href="route('logout')" method="DELETE" as="button" class="cursor-pointer">Logout</Link>
                 </div>
                 <div v-else class="flex items-center gap-3">
                     <Link :href="route('user-account.create')">Sign up</Link>
